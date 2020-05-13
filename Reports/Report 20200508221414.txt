@@ -1,0 +1,3 @@
+Report 20200508221414
+The avg cost for this period is 151.5 kr/kWh.
+The total cost for the period is 25599.0.
