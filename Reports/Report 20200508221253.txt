@@ -1,2 +1,0 @@
-Report 20200508221253
-Temperature:22.4 | Humidity:49.0 | Lumen:99.0 | time: 2020-05-08 00:03:21.0
