@@ -6,27 +6,26 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileWriter;
+import java.sql.*;
 import java.util.Date;
-import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.Properties;
 
 public class Client extends JFrame {
 
     private JTextArea inputArea = new JTextArea("2020-05-01&2020-05-03");
+    private JTextField outputArea = new JTextField("");
     JButton button=new JButton("Report for latest values");
     JButton button2=new JButton("Report for latest values");
 
     String[] parts;
 
     public void ConfigureJFrame(int sizeX, int sizeY, int locationX, int locationY){
-        setLayout(new GridLayout(6,1));
+        setLayout(new GridLayout(10,2));
         setSize(sizeX, sizeY);
         setLocation(locationX, locationY);
 
@@ -35,6 +34,8 @@ public class Client extends JFrame {
         JButton button3=new JButton("Detailed report of humidity(needs 2 dates seperated by coma)");
         JButton button4=new JButton("Detailed report of lumen(needs 2 dates seperated by coma)");
         JButton button5=new JButton("Electrical cost of (needs 2 dates seperated by coma)");
+        JButton button6=new JButton("Add new value (exempel: 20.5&50&...)");
+        JButton button7 =new JButton("Show latest values here");
 
         inputArea.addKeyListener(new KeyAdapter() {
             @Override
@@ -110,6 +111,25 @@ public class Client extends JFrame {
             }
 
         });
+        button6.addActionListener(e -> {
+            try {
+                AddRow("http://localhost:8080/AddRow/"+parts[0]+","+parts[1]+","+parts[2]+"");
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        });
+        button7.addActionListener(e -> {
+            try {
+                String data = GetData("http://localhost:8080//GetLatestRow");
+                System.out.println(data);
+                Gson gson = new Gson();
+                RowTemplate[] row = gson.fromJson(data, RowTemplate[].class);
+                outputArea.setText("Temperature: "+row[0].getTemperature()+" Humidity: "+row[0].getHumidity()+"Lumen: "+row[0].getLumen()+" Created: "+row[0].getTimestamp());
+
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        });
 
         add(button);
         add(inputArea);
@@ -117,13 +137,16 @@ public class Client extends JFrame {
         add(button3);
         add(button4);
         add(button5);
+        add(button6);
+        add(button7);
+        add(outputArea);
 
 
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
     public Client (){
-        ConfigureJFrame(400,350,300,300);
+        ConfigureJFrame(600,800,300,300);
     }
     public static void main(String[] args) throws IOException, InterruptedException {
         Client client = new Client();
@@ -146,7 +169,6 @@ public class Client extends JFrame {
             e.printStackTrace();
         }
     }
-
     public static void CreateReport2Temp(String data){
         Gson gson = new Gson();
         RowTemplate[] templateList = gson.fromJson(data, RowTemplate[].class);
@@ -287,5 +309,19 @@ public class Client extends JFrame {
             System.out.println("GET NOT WORKED");
         }
         return response.toString();
+    }
+    public static void AddRow(String restUrl) throws IOException {
+
+        URL url = new URL(restUrl);
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+        int responseCode = connection.getResponseCode();
+
+        if (responseCode == HttpURLConnection.HTTP_OK) {
+            System.out.println("Success!");
+        }
+        else {
+            System.out.println("FAILURE");
+        }
     }
 }
