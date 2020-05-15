@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="592af846-e016-4a2f-9bbd-00d601330908" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JdbcRestClient/Client$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JdbcRestClient/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JdbcRestClient/TemplatePackage/RowTemplate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JdbcRestClient/reportsCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,12 +88,25 @@
       <workItem from="1589445761795" duration="6000" />
       <workItem from="1589536502682" duration="20000" />
       <workItem from="1589542000115" duration="1374000" />
-      <workItem from="1589543390759" duration="2008000" />
+      <workItem from="1589543390759" duration="2145000" />
+      <workItem from="1589545662546" duration="534000" />
     </task>
+    <task id="LOCAL-00001" summary="Added &quot;add function&quot; and &quot;Show latest value here&quot;">
+      <created>1589545446274</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589545446274</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added &quot;add function&quot; and &quot;Show latest value here&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added &quot;add function&quot; and &quot;Show latest value here&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1312" y="402" key="#Auto_Import" timestamp="1588948616910">
@@ -113,34 +121,34 @@
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
     <state x="1525" y="453" key="#com.intellij.ide.util.MemberChooser/0.40.3440.1400@0.40.3440.1400" timestamp="1588950668633" />
-    <state x="1817" y="298" key="CommitChangelistDialog2" timestamp="1589545390642">
+    <state x="1964" y="306" key="CommitChangelistDialog2" timestamp="1589545445617">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="1817" y="298" key="CommitChangelistDialog2/0.0.3440.1400@0.0.3440.1400" timestamp="1589545390642" />
+    <state x="1964" y="306" key="CommitChangelistDialog2/0.0.3440.1400@0.0.3440.1400" timestamp="1589545445617" />
     <state x="1426" y="445" key="FileChooserDialogImpl" timestamp="1589369747543">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1426" y="445" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1589369747543" />
     <state x="1426" y="485" key="FileChooserDialogImpl/0.40.3440.1400@0.40.3440.1400" timestamp="1588949244844" />
-    <state width="2448" height="457" key="GridCell.Tab.0.bottom" timestamp="1589545372428">
+    <state width="1392" height="457" key="GridCell.Tab.0.bottom" timestamp="1589546195704">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="2448" height="457" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1589545372428" />
+    <state width="1392" height="457" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1589546195704" />
     <state width="1102" height="400" key="GridCell.Tab.0.bottom/0.40.3440.1400@0.40.3440.1400" timestamp="1588952784280" />
-    <state width="2448" height="457" key="GridCell.Tab.0.center" timestamp="1589545372428">
+    <state width="1392" height="457" key="GridCell.Tab.0.center" timestamp="1589546195704">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="2448" height="457" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1589545372428" />
+    <state width="1392" height="457" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1589546195704" />
     <state width="1102" height="400" key="GridCell.Tab.0.center/0.40.3440.1400@0.40.3440.1400" timestamp="1588952784280" />
-    <state width="2448" height="457" key="GridCell.Tab.0.left" timestamp="1589545372428">
+    <state width="1392" height="457" key="GridCell.Tab.0.left" timestamp="1589546195704">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="2448" height="457" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1589545372428" />
+    <state width="1392" height="457" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1589546195704" />
     <state width="1102" height="400" key="GridCell.Tab.0.left/0.40.3440.1400@0.40.3440.1400" timestamp="1588952784279" />
-    <state width="2448" height="457" key="GridCell.Tab.0.right" timestamp="1589545372428">
+    <state width="1392" height="457" key="GridCell.Tab.0.right" timestamp="1589546195704">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="2448" height="457" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1589545372428" />
+    <state width="1392" height="457" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1589546195704" />
     <state width="1102" height="400" key="GridCell.Tab.0.right/0.40.3440.1400@0.40.3440.1400" timestamp="1588952784280" />
     <state x="1200" y="150" width="998" height="1123" key="SettingsEditor" timestamp="1589369742641">
       <screen x="0" y="0" width="3440" height="1400" />
